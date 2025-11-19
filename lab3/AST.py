@@ -15,21 +15,21 @@ class Instructions(Node):
     def add(self, instruction):
         self.instructions.append(instruction)
 
-
+# (+, -, , /, .+, .-, ., ./) 
 class BinExpr(Node):
     def __init__(self, op, left, right):
         self.op = op
         self.left = left
         self.right = right
 
-
+# (<, >, <=, >=, ==, !=)
 class RelExpr(Node):
     def __init__(self, op, left, right):
         self.op = op
         self.left = left
         self.right = right
 
-
+#  (=, +=, -=, *=, /=)
 class Assignment(Node):
     def __init__(self, op, left, right):
         self.op = op
