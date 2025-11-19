@@ -48,7 +48,8 @@ class Scanner(Lexer):
         t.type = keywords.get(t.value, 'ID')
         return t
     # @_(r'\d+\.\d*([eE][+-]?\d+)?|\.\d+([eE][+-]?\d+)?|\d+[eE][+-]?\d+')
-    @_(r'(\d*\.\d+|\d+\.\d*)([eE][+-]?\d+)?|\d+[eE][+-]?\d+')
+    # @_(r'(\d*\.\d+|\d+\.\d*)([eE][+-]?\d+)?|\d+[eE][+-]?\d+')
+    @_(r'(\d*\.\d+|\d+\.)([eE][+-]?\d+)?|\d+[eE][+-]?\d+')
     def FLOATNUM(self, t):
         t.value = float(t.value)
         return t

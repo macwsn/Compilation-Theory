@@ -1,5 +1,6 @@
 *__pycache__/
 *__init__.py 
 lab3/scanner.py
-lab3/parser.out
 lab3/result.m
+*.out
+lab2/scanner.py
